@@ -1,0 +1,74 @@
+{
+  "id": "muse-wonder",
+  "name": "Muse Wonder — Editorial AI Generalist Portfolio",
+  "category": "portfolio",
+  "secondaryCategories": ["editorial", "interactive"],
+  "version": "2.0.0",
+  "entry": "templates/portfolio/muse-wonder/index.html",
+  "previewUrl": "./templates/portfolio/muse-wonder/index.html",
+  "description": "A research-lab and editorial-inspired personal portfolio featuring interactive ASCII/braille dot-matrix canvas trails, a procedural intro film banner, character-scramble headings, sticky section navigation, and dark/light theme support.",
+  "whenToUse": [
+    "Personal portfolio for AI generalists, creative technologists, researchers, or engineers",
+    "Editorial or essay-style narrative landing pages",
+    "Minimalist technical storytelling with interactive HTML5 canvas micro-experiences"
+  ],
+  "tags": [
+    "portfolio",
+    "editorial",
+    "ai-generalist",
+    "interactive-canvas",
+    "ascii-braille",
+    "monospace",
+    "dark-light-mode",
+    "scrollytelling",
+    "minimalist",
+    "zero-dependency"
+  ],
+  "techStack": ["HTML5", "CSS3", "Vanilla JavaScript", "HTML5 Canvas", "WOFF Custom Font"],
+  "designSystem": {
+    "typography": {
+      "display": "FieldMono (included custom WOFF monospace)",
+      "body": "Arial, Helvetica, sans-serif"
+    },
+    "themes": {
+      "dark": {
+        "body": "#0d1316",
+        "hero": "#050505",
+        "header": "#131b20",
+        "panel": "#1d2b33",
+        "text": "#f0f1f2",
+        "muted": "#99a3aa",
+        "accent": "#087fff",
+        "accentText": "#74b6ec"
+      },
+      "light": {
+        "body": "#ffffff",
+        "hero": "#ffffff",
+        "header": "#fafafa",
+        "panel": "#eff4f7",
+        "text": "#172027",
+        "muted": "#667279",
+        "accent": "#087fff",
+        "accentText": "#006fc9"
+      }
+    },
+    "keyComponents": [
+      "Interactive Hero Word/Dot-Matrix Field Canvas (#hero-field)",
+      "Procedural 16s Animated Intro Film Canvas with Progress Bar (#intro-film)",
+      "Braille/Block Character Scramble Reveal on Headings ([data-scramble])",
+      "Sticky Table of Contents Sidebar with Scroll-Spy (.contents)",
+      "Constellation Orbit Perspective Callout Card (.perspective-panel)",
+      "Accessible Tabbed Exploration Panel with Dynamic Generative Canvas (#exploration-panel)",
+      "Numbered Process List & Signature Copy-to-Clipboard Card",
+      "Gutter Node & Page Cursor Wake Overlay Canvas (#page-field)"
+    ]
+  },
+  "files": [
+    "index.html",
+    "style.css",
+    "app.js",
+    "fonts/mono.woff",
+    "fonts/LICENSE.txt",
+    "README.txt"
+  ]
+}

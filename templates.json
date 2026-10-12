@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "repository": "https://github.com/fahitakrim/Web_Template_io",
+  "title": "Web_Template_io — Design System & Site Template Registry",
+  "description": "Centralized catalog of web templates organized by design type and category for quick reference, live preview, and reuse.",
+  "categories": [
+    {
+      "id": "portfolio",
+      "name": "Portfolio & Personal Sites",
+      "path": "templates/portfolio",
+      "description": "Personal portfolios, creative technologist showcases, AI generalist introductions, and interactive resumes."
+    },
+    {
+      "id": "landing-page",
+      "name": "Landing Pages & SaaS",
+      "path": "templates/landing-page",
+      "description": "Product launches, startup landing pages, waitlists, and conversion-focused marketing pages."
+    },
+    {
+      "id": "editorial",
+      "name": "Editorial & Storytelling",
+      "path": "templates/editorial",
+      "description": "Long-form essays, research publications, scrollytelling articles, and documentation layouts."
+    },
+    {
+      "id": "agency-studio",
+      "name": "Agency & Creative Studio",
+      "path": "templates/agency-studio",
+      "description": "Design studios, interactive showcases, motion-heavy brand experiences, and case study hubs."
+    },
+    {
+      "id": "dashboard-app",
+      "name": "Dashboards & Web Apps",
+      "path": "templates/dashboard-app",
+      "description": "AI interfaces, admin panels, analytics dashboards, and productivity tools."
+    },
+    {
+      "id": "ecommerce",
+      "name": "E-Commerce & Storefronts",
+      "path": "templates/ecommerce",
+      "description": "Product catalogs, digital goods storefronts, and interactive lookbooks."
+    }
+  ],
+  "templates": [
+    {
+      "id": "muse-wonder",
+      "name": "Muse Wonder",
+      "subtitle": "Editorial AI Generalist Portfolio",
+      "category": "portfolio",
+      "secondaryCategories": ["editorial", "agency-studio"],
+      "path": "templates/portfolio/muse-wonder",
+      "entry": "templates/portfolio/muse-wonder/index.html",
+      "manifest": "templates/portfolio/muse-wonder/template.json",
+      "styleArchetype": "Research Lab / Monospace Editorial / Interactive Canvas",
+      "tags": [
+        "portfolio",
+        "editorial",
+        "ai-generalist",
+        "interactive-canvas",
+        "ascii-braille",
+        "monospace",
+        "dark-light-mode",
+        "scrollytelling",
+        "minimalist"
+      ],
+      "summary": "Dark/light editorial portfolio with interactive dot-matrix hero canvas, procedural intro film, braille text-scramble headings, sticky scroll-spy TOC, and generative exploration tabs.",
+      "palette": ["#0d1316", "#050505", "#1d2b33", "#087fff", "#74b6ec", "#f0f1f2"]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# Ignore raw zip imports and unorganized local scratch folders
+*.zip
+Muse wonder/
+.DS_Store
+Thumbs.db

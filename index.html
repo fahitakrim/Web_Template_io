@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web_Template_io — Design Type & Template Library</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #090d10;
+      --surface: #11181e;
+      --surface-hover: #172129;
+      --border: #22303a;
+      --text: #eef2f5;
+      --muted: #8b98a3;
+      --accent: #087fff;
+      --accent-soft: rgba(8, 127, 255, 0.14);
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(17, 24, 30, 0.85);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    .container {
+      width: min(1320px, 92%);
+      margin: 0 auto;
+    }
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--mono);
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .brand-badge {
+      display: inline-grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 18px;
+    }
+    .repo-link {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      transition: all 0.15s ease;
+    }
+    .repo-link:hover {
+      color: var(--text);
+      border-color: var(--accent);
+    }
+    .hero {
+      padding: 48px 0 28px;
+    }
+    .hero-overline {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #6ab4ff;
+      margin-bottom: 10px;
+    }
+    .hero h1 {
+      font-size: clamp(26px, 3.2vw, 42px);
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+    .hero p {
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0;
+      font-size: 15px;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 0 28px;
+      border-bottom: 1px solid var(--border);
+    }
+    .category-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      font-family: var(--mono);
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .pill:hover {
+      color: var(--text);
+      border-color: #3a5060;
+    }
+    .pill.active {
+      background: var(--accent-soft);
+      color: #7cc0ff;
+      border-color: var(--accent);
+    }
+    .search-box {
+      flex: 1;
+      min-width: 240px;
+      max-width: 340px;
+    }
+    .search-box input {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 9px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-family: var(--mono);
+      outline: none;
+    }
+    .search-box input:focus {
+      border-color: var(--accent);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 24px;
+      padding: 32px 0 72px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .card:hover {
+      border-color: #365066;
+    }
+    .preview-frame {
+      position: relative;
+      height: 240px;
+      background: #050505;
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .preview-frame iframe {
+      width: 142.85%;
+      height: 142.85%;
+      transform: scale(0.7);
+      transform-origin: 0 0;
+      border: 0;
+      pointer-events: none;
+    }
+    .preview-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(9, 13, 16, 0.85);
+      border: 1px solid var(--border);
+      color: #7cc0ff;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+      backdrop-filter: blur(6px);
+    }
+    .card-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 1;
+    }
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .card-title {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 600;
+    }
+    .card-subtitle {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+    .palette {
+      display: flex;
+      gap: 4px;
+      padding-top: 4px;
+    }
+    .swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .card-desc {
+      margin: 0;
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .meta-box {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: #b8c4ce;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    .meta-box code {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .copy-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 10px;
+      padding: 4px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .copy-btn:hover {
+      border-color: var(--accent);
+      color: #7cc0ff;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.04);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .card-actions {
+      margin-top: auto;
+      padding-top: 8px;
+      display: flex;
+      gap: 10px;
+    }
+    .btn-primary {
+      flex: 1;
+      text-align: center;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 10px 16px;
+      border-radius: 8px;
+      transition: background 0.15s ease;
+    }
+    .btn-primary:hover {
+      background: #1d8bff;
+    }
+    .btn-secondary {
+      text-align: center;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 12px;
+      font-family: var(--mono);
+      padding: 10px 14px;
+      border-radius: 8px;
+    }
+    .btn-secondary:hover {
+      border-color: var(--accent);
+    }
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 56px 20px;
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-bar">
+      <a class="brand" href="./index.html">
+        <span class="brand-badge">⠿</span>
+        <span>Web_Template_io</span>
+      </a>
+      <a class="repo-link" href="https://github.com/fahitakrim/Web_Template_io" target="_blank" rel="noopener">
+        github.com/fahitakrim/Web_Template_io ↗
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-overline">DESIGN SYSTEM &amp; SITE REGISTRY</div>
+      <h1>Call any design type on demand.</h1>
+      <p>Organized collection of standalone web templates indexed by category, aesthetic archetype, and interactive capabilities. Launch live previews directly or reference by template ID.</p>
+    </section>
+
+    <section class="controls">
+      <div class="category-pills" id="category-pills"></div>
+      <div class="search-box">
+        <input type="search" id="search-input" placeholder="Search by style, tag, or ID (e.g. portfolio, monospace)...">
+      </div>
+    </section>
+
+    <section class="grid" id="template-grid"></section>
+  </main>
+
+  <script>
+    const FALLBACK_CATALOG = {
+      categories: [
+        { id: "portfolio", name: "Portfolio & Personal Sites", path: "templates/portfolio" },
+        { id: "landing-page", name: "Landing Pages & SaaS", path: "templates/landing-page" },
+        { id: "editorial", name: "Editorial & Storytelling", path: "templates/editorial" },
+        { id: "agency-studio", name: "Agency & Creative Studio", path: "templates/agency-studio" },
+        { id: "dashboard-app", name: "Dashboards & Web Apps", path: "templates/dashboard-app" },
+        { id: "ecommerce", name: "E-Commerce & Storefronts", path: "templates/ecommerce" }
+      ],
+      templates: [
+        {
+          id: "muse-wonder",
+          name: "Muse Wonder",
+          subtitle: "Editorial AI Generalist Portfolio",
+          category: "portfolio",
+          secondaryCategories: ["editorial", "agency-studio"],
+          path: "templates/portfolio/muse-wonder",
+          entry: "templates/portfolio/muse-wonder/index.html",
+          manifest: "templates/portfolio/muse-wonder/template.json",
+          styleArchetype: "Research Lab / Monospace Editorial / Interactive Canvas",
+          tags: [
+            "portfolio",
+            "editorial",
+            "ai-generalist",
+            "interactive-canvas",
+            "ascii-braille",
+            "monospace",
+            "dark-light-mode",
+            "scrollytelling",
+            "minimalist"
+          ],
+          summary: "Dark/light editorial portfolio with interactive dot-matrix hero canvas, procedural intro film, braille text-scramble headings, sticky scroll-spy TOC, and generative exploration tabs.",
+          palette: ["#0d1316", "#050505", "#1d2b33", "#087fff", "#74b6ec", "#f0f1f2"]
+        }
+      ]
+    };
+
+    let catalog = FALLBACK_CATALOG;
+    let activeCategory = "all";
+    let query = "";
+
+    const pillsEl = document.getElementById("category-pills");
+    const gridEl = document.getElementById("template-grid");
+    const searchEl = document.getElementById("search-input");
+
+    function renderPills() {
+      const counts = { all: catalog.templates.length };
+      catalog.categories.forEach(c => {
+        counts[c.id] = catalog.templates.filter(
+          t => t.category === c.id || (t.secondaryCategories && t.secondaryCategories.includes(c.id))
+        ).length;
+      });
+
+      const items = [{ id: "all", name: "All Designs" }, ...catalog.categories];
+      pillsEl.innerHTML = items.map(item => `
+        <button class="pill ${activeCategory === item.id ? "active" : ""}" data-cat="${item.id}">
+          ${item.name} (${counts[item.id] || 0})
+        </button>
+      `).join("");
+
+      pillsEl.querySelectorAll(".pill").forEach(btn => {
+        btn.addEventListener("click", () => {
+          activeCategory = btn.dataset.cat;
+          renderPills();
+          renderGrid();
+        });
+      });
+    }
+
+    function renderGrid() {
+      const q = query.trim().toLowerCase();
+      const filtered = catalog.templates.filter(t => {
+        const matchesCat =
+          activeCategory === "all" ||
+          t.category === activeCategory ||
+          (t.secondaryCategories && t.secondaryCategories.includes(activeCategory));
+        if (!matchesCat) return false;
+        if (!q) return true;
+        const haystack = [
+          t.id,
+          t.name,
+          t.subtitle,
+          t.category,
+          t.styleArchetype,
+          t.summary,
+          ...(t.tags || [])
+        ].join(" ").toLowerCase();
+        return haystack.includes(q);
+      });
+
+      if (!filtered.length) {
+        gridEl.innerHTML = `<div class="empty-state">No templates registered in this filter yet. Add a new folder under <code>templates/${activeCategory === "all" ? "<category>" : activeCategory}/</code> and register it in <code>templates.json</code>.</div>`;
+        return;
+      }
+
+      gridEl.innerHTML = filtered.map(t => `
+        <article class="card">
+          <div class="preview-frame">
+            <iframe src="./${t.entry}" title="${t.name} live preview" loading="lazy"></iframe>
+            <span class="preview-badge">${t.category}</span>
+          </div>
+          <div class="card-body">
+            <div class="card-head">
+              <div>
+                <h2 class="card-title">${t.name}</h2>
+                <div class="card-subtitle">${t.subtitle} · ${t.styleArchetype}</div>
+              </div>
+              <div class="palette">
+                ${(t.palette || []).map(c => `<span class="swatch" style="background:${c}" title="${c}"></span>`).join("")}
+              </div>
+            </div>
+            <p class="card-desc">${t.summary}</p>
+            <div class="meta-box">
+              <code>${t.path}</code>
+              <button class="copy-btn" data-copy="${t.path}">Copy Path</button>
+            </div>
+            <div class="tags">
+              ${(t.tags || []).map(tag => `<span class="tag">#${tag}</span>`).join("")}
+            </div>
+            <div class="card-actions">
+              <a class="btn-primary" href="./${t.entry}">Open Live Site ↗</a>
+              <a class="btn-secondary" href="./${t.manifest}">Manifest</a>
+            </div>
+          </div>
+        </article>
+      `).join("");
+
+      gridEl.querySelectorAll(".copy-btn").forEach(btn => {
+        btn.addEventListener("click", async () => {
+          const val = btn.dataset.copy;
+          try {
+            await navigator.clipboard.writeText(val);
+            const prev = btn.textContent;
+            btn.textContent = "Copied!";
+            setTimeout(() => { btn.textContent = prev; }, 1400);
+          } catch {}
+        });
+      });
+    }
+
+    searchEl.addEventListener("input", e => {
+      query = e.target.value;
+      renderGrid();
+    });
+
+    fetch("./templates.json")
+      .then(r => r.ok ? r.json() : FALLBACK_CATALOG)
+      .then(data => {
+        catalog = data;
+        renderPills();
+        renderGrid();
+      })
+      .catch(() => {
+        renderPills();
+        renderGrid();
+      });
+  </script>
+</body>
+</html>
