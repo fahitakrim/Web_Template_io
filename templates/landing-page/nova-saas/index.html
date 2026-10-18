@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova — Next-Gen AI Intelligence Platform</title>
+  <meta name="description" content="Deploy autonomous swarms, stream real-time intelligence, and scale neural workflows in seconds.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Spotlight & Canvas Background -->
+  <div class="spotlight" id="spotlight"></div>
+  <canvas id="grid-canvas" class="grid-canvas" aria-hidden="true"></canvas>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand">
+        <div class="brand-symbol">
+          <span class="core-dot"></span>
+        </div>
+        <span class="brand-text">Nova<span class="brand-accent">.ai</span></span>
+      </a>
+      
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#features">Features</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Community</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-ghost" id="theme-toggle" aria-label="Toggle theme">◐</button>
+        <a href="#pricing" class="btn-shimmer">
+          <span>Start Free Trial</span>
+          <div class="shimmer-flare"></div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-badge" data-reveal>
+        <span class="badge-pulse"></span>
+        <span>Nova 3.0 is live: 4x faster swarm deduction</span>
+        <span class="badge-arrow">→</span>
+      </div>
+
+      <h1 class="hero-title" data-reveal>
+        Orchestrate Swarm Intelligence<br>
+        <span class="text-gradient">At Hyperscale Velocity</span>
+      </h1>
+
+      <p class="hero-sub" data-reveal>
+        Simulate human social emergence, predict complex system behaviors, and deploy self-evolving multi-agent pipelines with zero infrastructure friction.
+      </p>
+
+      <div class="hero-cta-group" data-reveal>
+        <a href="#pricing" class="btn-primary-glow">
+          <span>Deploy Cluster</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#architecture" class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          <span>Watch Sandbox (2m)</span>
+        </a>
+      </div>
+
+      <!-- Hero Mockup with 3D Tilt & Glow -->
+      <div class="hero-preview-wrapper" data-reveal>
+        <div class="preview-glow"></div>
+        <div class="hero-preview-card tilt-card" id="hero-card">
+          <div class="window-header">
+            <div class="window-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="window-title">cluster-us-east-1 // active-swarms [8,420 agents]</div>
+            <div class="window-pill">Operational</div>
+          </div>
+          <div class="terminal-content">
+            <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">nova swarm --seed="macro-q3-policy.json" --agents=5000 --rounds=40</span></div>
+            <div class="terminal-line t-info">[INFO] Initializing GraphRAG vector memory across 12 cluster shards...</div>
+            <div class="terminal-line t-cyan">[OK] 5,000 autonomous personas synthesized with long-term memory.</div>
+            <div class="terminal-line t-purple">[STREAM] Round 18/40: Public sentiment bifurcation detected (confidence: 94.2%).</div>
+            <div class="terminal-line t-emerald">[REPORT] Convergence reached in 3.42s. Prediction report ready for synthesis.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics Stat Ticker -->
+    <section class="metrics-section">
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-value" data-count="99.98">0</div>
+          <div class="metric-unit">%</div>
+          <div class="metric-label">Prediction Accuracy</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" data-count="140">0</div>
+          <div class="metric-unit">M+</div>
+          <div class="metric-label">Simulated Interactions</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" data-count="32">0</div>
+          <div class="metric-unit">ms</div>
+          <div class="metric-label">Median Latency</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" data-count="2400">0</div>
+          <div class="metric-unit">+</div>
+          <div class="metric-label">Teams in Production</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section with Border Beams -->
+    <section class="features-section" id="features">
+      <div class="section-head">
+        <span class="section-tag">ENGINE ARCHITECTURE</span>
+        <h2 class="section-title">Engineered for Massive Emergence</h2>
+        <p class="section-sub">Standard LLM chatbots hallucinate in isolation. Nova swarms debate, remember, and reflect reality.</p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Bento 1: Large Spotlight -->
+        <div class="bento-card span-2 tilt-card border-beam">
+          <div class="bento-icon">⚡</div>
+          <h3>Dynamic Persona Synthesis</h3>
+          <p>Extract archetypes, demographic weights, and behavioral priors directly from raw news feeds, research PDFs, or financial filings in seconds.</p>
+          <div class="bento-tags">
+            <span>GraphRAG</span><span>Vector Store</span><span>Long-Term Memory</span>
+          </div>
+        </div>
+
+        <!-- Bento 2 -->
+        <div class="bento-card tilt-card border-beam">
+          <div class="bento-icon">🧠</div>
+          <h3>Temporal Memory Graphs</h3>
+          <p>Agents form genuine episodic memories, grudges, and affiliations as simulations progress.</p>
+          <div class="bento-tags">
+            <span>Zep Graph</span><span>Episodic</span>
+          </div>
+        </div>
+
+        <!-- Bento 3 -->
+        <div class="bento-card tilt-card border-beam">
+          <div class="bento-icon">👁️</div>
+          <h3>God's-Eye Variable Injection</h3>
+          <p>Intervene in real time: trigger policy updates, emergency statements, or breaking news mid-simulation.</p>
+          <div class="bento-tags">
+            <span>Intervention</span><span>What-If</span>
+          </div>
+        </div>
+
+        <!-- Bento 4: Large -->
+        <div class="bento-card span-2 tilt-card border-beam">
+          <div class="bento-icon">📊</div>
+          <h3>Deep Synthesis ReportAgent</h3>
+          <p>An autonomous research agent queries the post-simulation network, tracks consensus drift, and formats actionable executive summaries.</p>
+          <div class="bento-tags">
+            <span>Automated Analysis</span><span>Markdown & PDF</span><span>Trend Projection</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section with Interactive Toggle -->
+    <section class="pricing-section" id="pricing">
+      <div class="section-head">
+        <span class="section-tag">FLEXIBLE INFRASTRUCTURE</span>
+        <h2 class="section-title">Start Small. Scale to Billions.</h2>
+        <div class="pricing-toggle">
+          <span class="toggle-label" id="monthly-label">Monthly</span>
+          <button class="toggle-switch" id="billing-switch" aria-label="Toggle annual billing">
+            <span class="switch-handle"></span>
+          </button>
+          <span class="toggle-label" id="annual-label">Annual <span class="discount-pill">Save 25%</span></span>
+        </div>
+      </div>
+
+      <div class="pricing-cards">
+        <!-- Starter Plan -->
+        <div class="price-card tilt-card">
+          <div class="card-plan">Starter</div>
+          <p class="card-desc">For indie hackers, authors, and researchers building exploratory prototypes.</p>
+          <div class="card-price">
+            <span class="currency">$</span>
+            <span class="amount" data-monthly="0" data-annual="0">0</span>
+            <span class="term">/ mo</span>
+          </div>
+          <ul class="plan-features">
+            <li>✓ Up to 100 concurrent agents</li>
+            <li>✓ 20 simulation rounds per run</li>
+            <li>✓ Standard GraphRAG memory</li>
+            <li>✓ Community Discord support</li>
+          </ul>
+          <button class="btn-plan outline">Deploy Free</button>
+        </div>
+
+        <!-- Pro Plan (Featured) -->
+        <div class="price-card featured tilt-card border-beam">
+          <div class="popular-ribbon">MOST POPULAR</div>
+          <div class="card-plan">Pro Swarm</div>
+          <p class="card-desc">For growth-stage startups, PR firms, and quantitative research teams.</p>
+          <div class="card-price">
+            <span class="currency">$</span>
+            <span class="amount" data-monthly="79" data-annual="59">79</span>
+            <span class="term">/ mo</span>
+          </div>
+          <ul class="plan-features">
+            <li>✓ Up to 5,000 concurrent agents</li>
+            <li>✓ Unlimited simulation rounds</li>
+            <li>✓ Real-time variable injection API</li>
+            <li>✓ Automated ReportAgent synthesis</li>
+            <li>✓ Priority model latency routing</li>
+          </ul>
+          <button class="btn-plan highlight">Launch Pro Swarm</button>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="price-card tilt-card">
+          <div class="card-plan">Enterprise</div>
+          <p class="card-desc">For mission-critical government, defense, and multinational decision systems.</p>
+          <div class="card-price">
+            <span class="amount-custom">Custom</span>
+          </div>
+          <ul class="plan-features">
+            <li>✓ Unlimited agents & custom topologies</li>
+            <li>✓ On-premise air-gapped deployment</li>
+            <li>✓ Custom fine-tuned persona models</li>
+            <li>✓ 24/7 dedicated engineering SLA</li>
+          </ul>
+          <button class="btn-plan outline">Contact Solutions</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Marquee -->
+    <section class="marquee-section" id="testimonials">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <div class="review-card">
+            <p>"Nova predicted the public pushback on our pricing redesign with 95% accuracy 2 weeks before launch."</p>
+            <div class="review-author"><strong>Sarah Lin</strong> — VP Product, Horizon Labs</div>
+          </div>
+          <div class="review-card">
+            <p>"The 3D canvas and agent memory graphs make complex simulation data instantly comprehensible."</p>
+            <div class="review-author"><strong>Marcus Vance</strong> — Senior AI Researcher</div>
+          </div>
+          <div class="review-card">
+            <p>"We replaced expensive external focus groups with 10-minute Nova simulations. Game changing."</p>
+            <div class="review-author"><strong>Elena Rostova</strong> — Brand Strategist</div>
+          </div>
+          <div class="review-card">
+            <p>"The ReportAgent synthesis gave us tactical crisis communication steps that saved our enterprise deal."</p>
+            <div class="review-author"><strong>Devon Kim</strong> — Founder, VectorScale</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Call To Action Banner -->
+    <section class="cta-banner">
+      <div class="cta-inner border-beam">
+        <h2>Ready to rehearse the future?</h2>
+        <p>Deploy your first simulation in under two minutes with zero credit card required.</p>
+        <div class="cta-buttons">
+          <a href="#pricing" class="btn-shimmer large">
+            <span>Get Started for Free</span>
+            <div class="shimmer-flare"></div>
+          </a>
+          <a href="https://github.com/fahitakrim/Web_Template_io" target="_blank" class="btn-secondary">View GitHub Source</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="brand-text">Nova<span class="brand-accent">.ai</span></span>
+        <p>Swarm intelligence engineered for predictive clarity.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Platform</h4>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#architecture">Architecture</a>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <a href="#testimonials">Community</a>
+          <a href="#">Documentation</a>
+          <a href="#">API Reference</a>
+        </div>
+        <div>
+          <h4>Template</h4>
+          <a href="../../../index.html">Web_Template_io Hub</a>
+          <a href="template.json">Manifest</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2026 Nova AI Systems. Built for <a href="../../../index.html">Web_Template_io</a> by Fahim Takrim.
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

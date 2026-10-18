@@ -14,16 +14,13 @@ Web_Template_io/
 └── templates/
     ├── portfolio/                    # Personal portfolios, generalist & developer showcases
     │   └── muse-wonder/              # [Template 01] Editorial AI Generalist Portfolio
-    │       ├── index.html            # Original standalone site (untouched)
-    │       ├── style.css             # Responsive dark/light theme & typography
-    │       ├── app.js                # Canvas animations, braille scramble, tabs
-    │       ├── fonts/                # Included FieldMono WOFF font & license
-    │       ├── README.txt            # Original template instructions
-    │       └── template.json         # Template design tokens & metadata manifest
     ├── landing-page/                 # SaaS, product launches, startup marketing pages
-    ├── editorial/                    # Long-form essays, research stories, blogs
-    ├── agency-studio/                # Creative studios, motion showcases
+    │   └── nova-saas/                # [Template 02] Modern AI SaaS / Aceternity & Magic UI
     ├── dashboard-app/                # AI interfaces, web apps, dashboards
+    │   └── apex-analytics/           # [Template 03] Tremor KPI & shadcn Minimalist Dashboard
+    ├── agency-studio/                # Creative studios, motion showcases
+    │   └── kinetic-craft/            # [Template 04] Luxury Agency / Framer Motion Physics
+    ├── editorial/                    # Long-form essays, research stories, blogs
     └── ecommerce/                    # Storefronts, digital product catalogs
 ```
 
@@ -34,6 +31,9 @@ Web_Template_io/
 | ID | Name | Category | Style Archetype | Key Features | Path |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **`muse-wonder`** | **Muse Wonder** | `portfolio` / `editorial` | Research Lab · Monospace Editorial · Interactive Canvas | Interactive ASCII/dot-matrix hero canvas, procedural 16s intro film, braille text-scramble headings, sticky scroll-spy TOC, dark/light mode, generative tabs | `templates/portfolio/muse-wonder/` |
+| **`nova-saas`** | **Nova SaaS** | `landing-page` / `agency-studio` | Modern AI SaaS · Aceternity Spotlight & Grid · Magic UI | Mouse-tracking ambient spotlight, animated retro grid canvas, rotating border-beam cards, 3D card tilt, animated stat counters, annual/monthly billing toggle | `templates/landing-page/nova-saas/` |
+| **`apex-analytics`** | **Apex Analytics** | `dashboard-app` / `landing-page` | Minimalist Telemetry · Tremor KPI Cards · shadcn Table | Collapsible telemetry sidebar, Tremor-style KPI cards with SVG sparklines, interactive multi-metric canvas area chart with tooltips, filterable & searchable data table | `templates/dashboard-app/apex-analytics/` |
+| **`kinetic-craft`** | **Kinetic Craft** | `agency-studio` / `portfolio` | Awwwards Luxury Agency · Framer Motion · Magnetic Interactions | Spring magnetic cursor physics with trailing follower, magnetic action buttons, 3D tilt case study cards, continuous award ticker, interactive services accordion | `templates/agency-studio/kinetic-craft/` |
 
 ---
 
@@ -42,9 +42,9 @@ Web_Template_io/
 When building a new site or prompting an AI coding assistant, you can reference this repository by:
 
 1. **By Template ID:**
-   > *"Use the `muse-wonder` template from `Web_Template_io` (`templates/portfolio/muse-wonder`) for this site."*
+   > *"Use the `nova-saas` template from `Web_Template_io` (`templates/landing-page/nova-saas`) for this site."*
 2. **By Design Category or Tags (via `templates.json`):**
-   > *"Check `templates.json` in `Web_Template_io` for a `portfolio` or `editorial` design with `interactive-canvas` and `monospace`."*
+   > *"Check `templates.json` in `Web_Template_io` for a `dashboard-app` with `tremor`, `sparklines`, and `canvas-chart`."*
 
 ---
 
@@ -66,4 +66,7 @@ py -m http.server 8000
 ```
 
 - **Template Library Hub:** `http://localhost:8000/`
-- **Muse Wonder (Direct Live Site):** `http://localhost:8000/templates/portfolio/muse-wonder/`
+- **Muse Wonder:** `http://localhost:8000/templates/portfolio/muse-wonder/`
+- **Nova SaaS:** `http://localhost:8000/templates/landing-page/nova-saas/`
+- **Apex Analytics:** `http://localhost:8000/templates/dashboard-app/apex-analytics/`
+- **Kinetic Craft:** `http://localhost:8000/templates/agency-studio/kinetic-craft/`

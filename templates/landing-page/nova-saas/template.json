@@ -1,0 +1,80 @@
+{
+  "id": "nova-saas",
+  "name": "Nova SaaS - AI Intelligence & Cloud Platform",
+  "category": "landing-page",
+  "secondaryCategories": [
+    "agency-studio"
+  ],
+  "version": "1.0.0",
+  "entry": "templates/landing-page/nova-saas/index.html",
+  "previewUrl": "./templates/landing-page/nova-saas/index.html",
+  "description": "Next-generation SaaS landing page inspired by Aceternity UI and Magic UI. Features mouse-following ambient spotlights, interactive retro grid canvas, rotating border beams, 3D card tilts, animated stat counters, and annual/monthly billing switcher.",
+  "whenToUse": [
+    "High-converting SaaS, AI, and developer platform landing pages",
+    "Product launch showcases requiring premium dark mode aesthetic and motion effects",
+    "Showcasing features with bento grid layouts and interactive terminal windows"
+  ],
+  "tags": [
+    "landing-page",
+    "saas",
+    "ai-platform",
+    "aceternity-ui",
+    "magic-ui",
+    "spotlight",
+    "border-beam",
+    "3d-tilt",
+    "canvas-particles",
+    "dark-light-mode"
+  ],
+  "techStack": [
+    "HTML5",
+    "CSS3 (Glassmorphism, CSS Mask, Keyframes)",
+    "Vanilla JavaScript",
+    "HTML5 Canvas Particle Grid",
+    "Zero Dependencies"
+  ],
+  "designSystem": {
+    "typography": {
+      "display": "system-ui, -apple-system, sans-serif",
+      "mono": "ui-monospace, SFMono-Regular, Menlo, monospace"
+    },
+    "themes": {
+      "dark": {
+        "body": "#030712",
+        "card": "rgba(17, 24, 39, 0.7)",
+        "accent": "#6366f1",
+        "accentPurple": "#a855f7",
+        "accentCyan": "#06b6d4",
+        "accentEmerald": "#10b981",
+        "text": "#f9fafb",
+        "muted": "#9ca3af"
+      },
+      "light": {
+        "body": "#f8fafc",
+        "card": "rgba(255, 255, 255, 0.85)",
+        "accent": "#4f46e5",
+        "accentPurple": "#9333ea",
+        "accentCyan": "#0891b2",
+        "text": "#0f172a",
+        "muted": "#64748b"
+      }
+    },
+    "keyComponents": [
+      "Dynamic Mouse-following Ambient Spotlight",
+      "Interactive Perspective Node & Grid Canvas (#grid-canvas)",
+      "Continuous Rotating Border-Beam Cards (.border-beam)",
+      "3D Pointer Tilt with Perspective Depth (.tilt-card)",
+      "Animated Live Counter Ticker for Metrics (.metric-value)",
+      "Annual / Monthly Pricing Switcher with Numeric Transitions",
+      "Simulated Multi-Agent Cluster Terminal Preview (#hero-card)",
+      "Continuous Testimonial Marquee Ticker (.marquee-track)",
+      "Magic UI Shimmer Flare CTA Button (.btn-shimmer)"
+    ]
+  },
+  "files": [
+    "index.html",
+    "style.css",
+    "app.js",
+    "template.json"
+  ]
+}

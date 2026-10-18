@@ -1,0 +1,79 @@
+{
+  "id": "apex-analytics",
+  "name": "Apex Analytics - Next-Gen Swarm Ops Dashboard",
+  "category": "dashboard-app",
+  "secondaryCategories": [
+    "landing-page"
+  ],
+  "version": "1.0.0",
+  "entry": "templates/dashboard-app/apex-analytics/index.html",
+  "previewUrl": "./templates/dashboard-app/apex-analytics/index.html",
+  "description": "Minimalist operational analytics dashboard inspired by Tremor and shadcn/ui. Features collapsible sidebar telemetry, Tremor-style KPI metric cards with SVG sparklines, interactive multi-dataset HTML5 canvas area chart, filterable and searchable data table, and modal dialogs.",
+  "whenToUse": [
+    "SaaS operational dashboards, telemetry monitors, and cloud metrics panels",
+    "Data visualization interfaces requiring clean KPI cards and interactive area charts",
+    "Admin portals with searchable, filterable, and paginated data tables"
+  ],
+  "tags": [
+    "dashboard",
+    "tremor",
+    "shadcn",
+    "analytics",
+    "kpi-cards",
+    "sparklines",
+    "canvas-chart",
+    "filterable-table",
+    "dark-light-mode"
+  ],
+  "techStack": [
+    "HTML5",
+    "CSS3 (Flexbox, Grid, CSS Variables)",
+    "Vanilla JavaScript",
+    "HTML5 Canvas Area Chart",
+    "Zero Dependencies"
+  ],
+  "designSystem": {
+    "typography": {
+      "display": "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
+      "mono": "ui-monospace, SFMono-Regular, Menlo, monospace"
+    },
+    "themes": {
+      "dark": {
+        "body": "#09090b",
+        "sidebar": "#0c0a09",
+        "card": "#121215",
+        "accent": "#3b82f6",
+        "emerald": "#10b981",
+        "purple": "#a855f7",
+        "text": "#fafafa",
+        "muted": "#a1a1aa"
+      },
+      "light": {
+        "body": "#f8fafc",
+        "sidebar": "#ffffff",
+        "card": "#ffffff",
+        "accent": "#2563eb",
+        "emerald": "#10b981",
+        "purple": "#9333ea",
+        "text": "#0f172a",
+        "muted": "#64748b"
+      }
+    },
+    "keyComponents": [
+      "Collapsible Telemetry Sidebar Navigation (#sidebar)",
+      "Tremor-style KPI Metric Cards with Trend Badges & SVG Sparklines (.kpi-card)",
+      "Interactive Smooth Bezier Area Chart with Hover Crosshairs (#analytics-chart)",
+      "Metric Switcher Tabs (Tokens, Revenue, Active Swarms)",
+      "Filterable and Searchable Simulation Data Table (.data-table)",
+      "Live Status Badges (Completed, Simulating, Queued)",
+      "Interactive New Simulation Modal Drawer (#sim-modal)",
+      "Time Range Selector Pills (24H, 7D, 30D, 90D)"
+    ]
+  },
+  "files": [
+    "index.html",
+    "style.css",
+    "app.js",
+    "template.json"
+  ]
+}
